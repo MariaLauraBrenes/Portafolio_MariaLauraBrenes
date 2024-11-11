@@ -20,6 +20,5 @@ public interface CategoriaService {
     public void save(Categoria categoria);
     
     // Se elimina la categoria que tiene el id pasado por parámetro
-    public void delete(Categoria categoria);
- 
+  public void delete(Categoria categoria);
 }
