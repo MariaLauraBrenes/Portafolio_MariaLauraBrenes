@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
+
 @Service
 public class RegistroServiceImpl implements RegistroService {
 
@@ -190,3 +191,4 @@ public class RegistroServiceImpl implements RegistroService {
                 asunto, mensaje);
     }
 }
+

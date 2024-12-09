@@ -6,22 +6,22 @@
         <title>TechShop</title>
     </head>
     <body>
-      <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal -->
-<section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
-    <div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
-        <div class="row">
-            <div class="col-md-3">
-                <button 
-                    type="button" 
-                    class="btn btn-primary btn-block" 
-                    data-bs-toggle="modal" 
-                    data-bs-target="#agregarCategoria">
-                    <i class="fas fa-plus"></i> [[#{categoria.agregar}]]
-                </button>
+        <!-- 1 Sección para crear el boton de agregar... llamará a una ventana modal -->
+        <section th:fragment="botonesAgregar" class="py-4 mb-4 bg-light">
+            <div class="container" sec:authorize="hasRole('ROLE_ADMIN')">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button 
+                            type="button" 
+                            class="btn btn-primary btn-block" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarCategoria">
+                            <i class="fas fa-plus"></i> [[#{categoria.agregar}]]
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
 
         <!-- 2 Fragmento para agregar categoria, es la ventana modal -->

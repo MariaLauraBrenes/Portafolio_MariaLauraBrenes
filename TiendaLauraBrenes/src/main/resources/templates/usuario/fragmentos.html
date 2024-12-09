@@ -134,8 +134,7 @@
             </div>
         </section>
 
-        <!-- 4 Fragmento que se utiliza en la página modifca.html -->
-        <section th:fragment="editarUsuario">
+<section th:fragment="editarUsuario">
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
@@ -143,9 +142,9 @@
                           th:action="@{/usuario/guardar}" th:object="${usuario}"
                           class="was-validated"
                           enctype="multipart/form-data">
-                        <input type="hidden" name="idUsuario" th:field="*{idUsuario}"/>
+                        <input type="hidden" name="idUsuario" th:field="*{idUsuario}" />
                         <section th:replace="~{usuario/fragmentos :: botonesEditar}"/>
-                        <div id=details>
+                        <div id="details">
                             <div class="container">
                                 <div class="row">
                                     <div class="col">
@@ -154,6 +153,9 @@
                                                 <h4>[[#{accion.actualizar}]]</h4>
                                             </div>
                                             <div class="card-body">
+                                                <!-- Campo oculto para el username -->
+                                                <input type="hidden" name="username" th:field="*{username}" />
+
                                                 <div class="mb-3">
                                                     <label for="nombre">[[#{usuario.nombre}]]</label>
                                                     <input type="text" class="form-control" 
@@ -181,8 +183,10 @@
                                                     <label for="imagen">[[#{usuario.imagen}]]</label>
                                                     <input class="form-control" type="file" name="imagenFile"
                                                            onchange="readURL(this);" />
-                                                    <img id="blah" th:src="@{${usuario.rutaImagen}}" alt="your image" height="200"/>
+                                                    <img id="blah" th:src="@{${usuario.rutaImagen}}" alt="Imagen del usuario" height="200"/>
                                                 </div>
+
+                                                <input type="hidden" name="password" th:field="*{password}" />
                                             </div>
                                         </div>
                                     </div>
